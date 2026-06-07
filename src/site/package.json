@@ -1,0 +1,21 @@
+{
+  "name": "arka-bid-workshop-site",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "check:svelte": "npx @sveltejs/mcp svelte-autofixer ./src/App.svelte --svelte-version 5 && npx @sveltejs/mcp svelte-autofixer ./src/lib/MermaidDiagram.svelte --svelte-version 5"
+  },
+  "dependencies": {
+    "mermaid": "latest",
+    "svelte": "latest"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "latest",
+    "typescript": "latest",
+    "vite": "latest"
+  }
+}

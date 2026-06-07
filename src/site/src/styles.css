@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,520&family=IBM+Plex+Mono:wght@600&family=Inter:wght@450;600;700&display=swap');
+
+:root {
+  --drawing-surface: #F3EFE7;
+  --paper-panel: #FBF7EE;
+  --graphite: #25221D;
+  --soft-graphite: #5B554B;
+  --rule-line: #CFC5B5;
+  --faint-line: #E5DCCF;
+  --decision-ochre: #B7792B;
+  --risk-clay: #A84E3D;
+  --evidence-sage: #5F7C68;
+  --future-blue: #536F8C;
+  color: var(--graphite);
+  background: var(--drawing-surface);
+  font-family: Inter, Arial, sans-serif;
+  font-weight: 450;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; }
+button, input, textarea { font: inherit; }
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(var(--faint-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--faint-line) 1px, transparent 1px);
+  background-size: 32px 32px;
+  opacity: 0.45;
+}
+
+.display {
+  font-family: Fraunces, Georgia, serif;
+  font-size: clamp(2.4rem, 6vw, 5.2rem);
+  font-weight: 500;
+  line-height: 0.95;
+  letter-spacing: -0.045em;
+}
+
+.headline {
+  font-family: Fraunces, Georgia, serif;
+  font-size: clamp(1.6rem, 3vw, 2.8rem);
+  font-weight: 520;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+}
+
+.label {
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.055em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.note {
+  background: var(--paper-panel);
+  border: 1px solid var(--rule-line);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 10px 24px rgb(37 34 29 / 0.06);
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border-radius: 6px;
+  color: var(--paper-panel);
+  padding: 6px 10px;
+}
+.chip.decision { background: var(--decision-ochre); }
+.chip.risk { background: var(--risk-clay); }
+.chip.evidence { background: var(--evidence-sage); }
+.chip.future { background: var(--future-blue); }
